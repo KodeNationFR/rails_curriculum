@@ -1,24 +1,48 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ce Fichier README contient toutes les indications pour faire fonctionner le projet.
 
-Things you may want to cover:
 
-* Ruby version
+* Ruby version : 2.6.3
 
-* System dependencies
+* Rails version : 5.2.3
 
-* Configuration
+* System dependencies : bundler 1.17.2
 
-* Database creation
+* Configuration : postgresql 9.5
 
-* Database initialization
+* Database creation : [installer PostgreSQL](https://gorails.com/setup/ubuntu/16.04#postgresql)
+  - Créer un utilisateur PostgreSQL : `sudo -u postgres createuser user`
+  - Créer la BDD de dévelopement et celle de test :
+  ```
+  sudo service postgresql start
+  sudo passwd postgres
+  // cette commande vous invite à saisir votre mot de pass et à le confirmer, vous ne verrais pas votre mot de passe à l’écrit ni de petits points ou étoiles mais votre mot de passe est saisi quand même. //
+  sudo -u postgres psql
+  // cette commande a pour effet de te faire entrer dans la CLI, tu verras le préfix de ton terminal passer à : postgres=# //
+  CREATE DATABASE "curriculum_development" OWNER "user";
+  CREATE DATABASE "curriculum_test" OWNER "user";
+  //cette commande renvoie “CREATE DATABASE” si tout fonctionne.
+```
 
-* How to run the test suite
+* Database initialization :
+dans `config>database.yml` 
+```yml
+development:
+  <<: *default
+  database: curriculum_development
 
-* Services (job queues, cache servers, search engines, etc.)
+  #username: user
+  #password: ""
 
-* Deployment instructions
+  test:
+    <<: *default
+    database: curriculum_test
+    #username: user
+    #password: ""
+```
+
+
+* Deployment instructions :
 
 * ...
