@@ -26,7 +26,8 @@ Ce Fichier README contient toutes les indications pour faire fonctionner le proj
 ```
 
 * Database initialization :
-dans `config>database.yml` 
+l'app est configurée comme suit dans dans `config>database.yml` , à l'étape précédente, pensez bien à créer un utilisateur "user" avec un mot de passe vide, puis de créer les BDD suivantes `curriculum_development` et `curriculum_test`.
+
 ```yml
 development:
   <<: *default
@@ -41,8 +42,7 @@ development:
     #username: user
     #password: ""
 ```
-
-
-* Deployment instructions :
+une fois votre environnement en place avec la bonne version de Ruby, de Rails
+de bundler et de PostgreSQL, déplacez vous dans le dossier de l'app et faites `bundle install` puis `rails db:migrate` pour installer les dépendances et la connection avec votre base de donnée.
 
 * ...
