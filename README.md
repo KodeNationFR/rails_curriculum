@@ -3,9 +3,12 @@
 Ce Fichier README contient toutes les indications pour faire fonctionner le projet.
 
 Pour contribuer, dans votre terminal, déplacez vous dans le dossier de votre choix, puis clonez le projet avec git :
-```git
-git@github.com:KodeNationFR/rails_curriculum.git
-```
+
+`git clone ssh://git@github.com:KodeNationFR/rails_curriculum.git`
+
+ensuite créez votre branche `git branche <VOTRE_BRANCHE> && git checkout <VOTRE_BRANCHE>`, puis travaillez normalement. une fois vos modifications faites poussez votre branche sur github `git push origin <VOTRE_BRANCHE>` (github vous demandera si vous voulez créer une nouvelle branche sur le dépot distant du nom de votre branche, confirmez) et faites une pull request.
+
+---
 assurez vous d'avoir les mêmes versions de ruby, rails, bundler, et PostgreSQL, sinon vous devrez préfixer toutes vos commande rails par `bundle exec VOTRE_COMMANDE`
 
 
@@ -13,9 +16,9 @@ assurez vous d'avoir les mêmes versions de ruby, rails, bundler, et PostgreSQL,
 
 * Rails version : 5.2.3
 
-* System dependencies : bundler 1.17.2
+* Bundler version : 1.17.2
 
-* Configuration : postgresql 9.5
+* PostgreSQL version : 9.5
 
 * Database creation : [installer PostgreSQL](https://gorails.com/setup/ubuntu/16.04#postgresql)
   - Créer un utilisateur PostgreSQL : `sudo -u postgres createuser user`
