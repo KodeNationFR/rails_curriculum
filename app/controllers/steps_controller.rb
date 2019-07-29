@@ -24,7 +24,7 @@ class StepsController < ApplicationController
   def create
     @step = Step.new(step_params)
     if @step.save
-      redirect_to @step, notice: 'Step was successfully created.'
+      redirect_to @step, notice: "Module #{@step.title} créé avec succès"
     else
       render :new
     end
@@ -33,7 +33,7 @@ class StepsController < ApplicationController
   # PATCH/PUT /steps/1
   def update
     if @step.update(step_params)
-      redirect_to @step, notice: 'Step was successfully updated.'
+      redirect_to @step, notice: "Module #{@step.title} mis à jour avec succès"
     else
       render :edit
     end
@@ -42,7 +42,7 @@ class StepsController < ApplicationController
   # DELETE /steps/1
   def destroy
     @step.destroy
-    redirect_to steps_url, notice: 'Step was successfully destroyed.'
+    redirect_to steps_url, notice: "Module #{@step.title} supprimé avec succès"
   end
 
   private

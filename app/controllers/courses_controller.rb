@@ -24,7 +24,7 @@ class CoursesController < ApplicationController
   def create
     @course = Course.new(course_params)
     if @course.save
-      redirect_to @course, notice: 'Course was successfully created.'
+      redirect_to @course, notice: "Curriculum #{@course.title} créé avec succès"
     else
       render :new
     end
@@ -33,7 +33,7 @@ class CoursesController < ApplicationController
   # PATCH/PUT /courses/1
   def update
     if @course.update(course_params)
-      redirect_to @course, notice: 'Course was successfully updated.'
+      redirect_to @course, notice: "Curriculum #{@course.title} mis à jour avec succès"
     else
         render :edit
     end
@@ -42,7 +42,7 @@ class CoursesController < ApplicationController
   # DELETE /courses/1
   def destroy
     @course.destroy
-    redirect_to courses_url, notice: 'Course was successfully destroyed.'
+    redirect_to courses_url, notice: "Curriculum #{@course.title} supprimé avec succès"
   end
 
   private
