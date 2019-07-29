@@ -3,7 +3,7 @@ class StepsController < ApplicationController
 
   # GET /steps
   def index
-    @steps = Step.all
+    @steps = Step.includes(:course).all
   end
 
   # GET /steps/1
@@ -53,6 +53,6 @@ class StepsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def step_params
-      params.require(:step).permit(:title, :description, :access, :image)
+      params.require(:step).permit(:title, :description, :access, :image, :course_id)
     end
 end
