@@ -9,6 +9,7 @@ class CoursesController < ApplicationController
   # GET /courses/1
   def show
     redirect_to courses_path if @course.access === false
+
   end
 
   # GET /courses/new

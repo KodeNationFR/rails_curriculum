@@ -3,7 +3,7 @@ class StepsController < ApplicationController
 
   # GET /steps
   def index
-    @steps = Step.includes(:course).all
+    @steps = Step.all
   end
 
   # GET /steps/1

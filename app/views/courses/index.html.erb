@@ -9,6 +9,7 @@
       <th>Description</th>
       <th>Access</th>
       <th>Image</th>
+      <th>Modules</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,6 +21,13 @@
         <td><%= course.description %></td>
         <td><%= course.access %></td>
         <td><%= course.image %></td>
+        <% if course.steps %>
+          <% course.steps.each do |step| %>
+            <td><%= step.title %></td>
+          <% end %>
+        <% else %>
+          <td><em>Empty !</em></td>
+        <% end %>
         <td><%= link_to 'Show', course %></td>
         <td><%= link_to 'Edit', edit_course_path(course) %></td>
         <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -27,6 +35,8 @@
     <% end %>
   </tbody>
 </table>
+
+
 
 <br>
 

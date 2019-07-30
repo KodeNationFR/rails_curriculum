@@ -20,8 +20,8 @@
         <td><%= step.description %></td>
         <td><%= step.access %></td>
         <td><%= step.image %></td>
-        <td><%= link_to 'Show', step %></td>
-        <td><%= link_to 'Edit', edit_step_path(step) %></td>
+        <td><%= link_to 'Show', steps_path(step.id) %></td>
+        <td><%= link_to 'Edit', edit_step_path(step.id) %></td>
         <td><%= link_to 'Destroy', step, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
