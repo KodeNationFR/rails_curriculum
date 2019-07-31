@@ -1,0 +1,128 @@
+/* 1ere section, partie details du contenu du site */
+
+.explication {
+    height: 100vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+}
+
+.explication p {
+    width: 80%;
+    margin-top: 10%;
+}
+
+.img-presentation {
+    width: 100%;
+    height: 220px;
+    margin-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-evenly;
+}
+
+.img-presentation img {
+    height: 100px;
+    width: 100px;
+}
+
+.doc,
+.laptop,
+.community {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.explication .button {
+    cursor: pointer;
+    position: absolute;
+    left: 40%;
+    top: 190vh;
+    height: 60px;
+    width: 20%;
+    border-radius: 5px;
+    background-color: rgb(236, 83, 113);
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+/* 2e section, partie exposition des languages */
+
+.languages {
+    width: 100%;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.languages h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.languages .barre-hor {
+    height: 8px;
+    width: 60px;
+    background: rgb(236, 83, 113);
+
+}
+
+.languages .logoLang {
+    width: 100%;
+    height: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+}
+
+.languages .logoLang img {
+    height: 100px;
+    width: 100px;
+}
