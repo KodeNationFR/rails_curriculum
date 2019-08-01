@@ -9,6 +9,7 @@ class StepsController < ApplicationController
   # GET /steps/1
   def show
     redirect_to steps_path if @step.access === false
+    @course = @step.course
   end
 
   # GET /steps/new
@@ -41,7 +42,8 @@ class StepsController < ApplicationController
 
   # DELETE /steps/1
   def destroy
-    @step.destroy
+    @course = @step.course
+    @course.steps.find(params[:id]).destroy
     redirect_to steps_url, notice: "Module #{@step.title} supprimé avec succès"
   end
 

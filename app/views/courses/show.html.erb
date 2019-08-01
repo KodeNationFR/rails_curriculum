@@ -20,5 +20,20 @@
   <%= @course.image %>
 </p>
 
+<% @course.steps.each do |step| %>
+  <div class="box">
+    <h3><%= step.title %></h3>
+    ---------------
+    <ul>
+      <li><%= step.description %></li>
+      <li><%= step.image %></li>
+      <%= link_to 'voir', step_path(step.id) %> |
+      <%= link_to 'modifier', edit_step_path(step.id) %> |
+      <%= link_to 'supprimé', step_path(step.id),controller: :steps, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+    </ul>
+  </div>
+<% end %>
+<hr>
 <%= link_to 'Edit', edit_course_path(@course) %> |
 <%= link_to 'Back', courses_path %>
