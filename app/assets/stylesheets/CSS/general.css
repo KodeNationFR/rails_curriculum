@@ -267,7 +267,7 @@ footer a {
         height: 25px;
         padding: 10px;
         cursor: pointer;
-        background-color: rgb(236, 83, 113);
+        background-color: rgb(255, 255, 255);
         border-radius: 25%;
         position: absolute;
         top: 20px;
@@ -395,10 +395,8 @@ footer a {
 
     .menu ul li:hover,
     .login ul li:hover {
-        background-color: rgb(236, 83, 113);
+        border-bottom: solid 2px rgb(255, 255, 255);
         padding: 2px;
-        border-bottom-right-radius: 8px;
-        border-top-left-radius: 8px;
     }
 
     .menu ul li a::after {
