@@ -27,9 +27,9 @@
     <ul>
       <li><%= step.description %></li>
       <li><%= step.image %></li>
-      <%= link_to 'voir', step_path(step.id) %> |
-      <%= link_to 'modifier', edit_step_path(step.id) %> |
-      <%= link_to 'supprimé', step_path(step.id),controller: :steps, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= link_to 'voir', course_step_path(step.id) %> |
+      <%= link_to 'modifier', edit_course_step_path(step.id) %> |
+      <%= link_to 'supprimé', course_step_path(step.id),controller: :steps, method: :delete, data: { confirm: 'Are you sure?' } %>
 
     </ul>
   </div>
